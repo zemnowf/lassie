@@ -1,244 +1,91 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-				</div><!--end .bx-content -->
 
-				<!-- region Sidebar -->
-				<?if (!$needSidebar):?>
-					<div class="sidebar col-md-3 col-sm-4">
-						<?$APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							"",
-							Array(
-								"AREA_FILE_SHOW" => "sect",
-								"AREA_FILE_SUFFIX" => "sidebar",
-								"AREA_FILE_RECURSIVE" => "Y",
-								"EDIT_MODE" => "html",
-							),
-							false,
-							Array('HIDE_ICONS' => 'Y')
-						);?>
-					</div>
-				<?endif?>
-				<!--endregion -->
-
-			</div><!--end row-->
-			<?$APPLICATION->IncludeComponent(
-				"bitrix:main.include",
-				"",
-				Array(
-					"AREA_FILE_SHOW" => "sect",
-					"AREA_FILE_SUFFIX" => "bottom",
-					"AREA_FILE_RECURSIVE" => "N",
-					"EDIT_MODE" => "html",
-				),
-				false,
-				Array('HIDE_ICONS' => 'Y')
-			);?>
-		</div><!--end .container.bx-content-section-->
-	</div><!--end .workarea-->
-
-	<footer class="bx-footer">
-		<div class="bx-footer-section bx-footer-bg">
-			<div class="container">
-				<?$APPLICATION->IncludeComponent(
-					"bitrix:main.include",
-					"",
-					Array(
-						"AREA_FILE_SHOW" => "file",
-						"PATH" => SITE_DIR."include/socnet_footer.php",
-						"AREA_FILE_RECURSIVE" => "N",
-						"EDIT_MODE" => "html",
-					),
-					false,
-					Array('HIDE_ICONS' => 'Y')
-				);?>
-			</div>
-		</div>
-		<div class="bx-footer-section py-5 bg-dark">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-lg-3 order-lg-2 order-1 mb-4 mb-lg-0">
-						<h4 class="bx-block-title text-light">
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:main.include",
-								"",
-								array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR."include/about_title.php"
-								),
-								false
-							);?>
-						</h4>
-						<? $APPLICATION->IncludeComponent(
-							"bitrix:menu",
-							"bottom_menu",
-							array(
-								"ROOT_MENU_TYPE" => "bottom",
-								"MAX_LEVEL" => "1",
-								"MENU_CACHE_TYPE" => "A",
-								"CACHE_SELECTED_ITEMS" => "N",
-								"MENU_CACHE_TIME" => "36000000",
-								"MENU_CACHE_USE_GROUPS" => "Y",
-								"MENU_CACHE_GET_VARS" => array(),
-							),
-							false
-						);?>
-					</div>
-					<div class="col-sm-6 col-lg-3 order-lg-3 order-2 mb-4 mb-lg-0">
-						<h4 class="bx-block-title text-light">
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:main.include",
-								"",
-								array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR."include/catalog_title.php"
-								),
-								false
-							);?>
-						</h4>
-						<?$APPLICATION->IncludeComponent(
-							"bitrix:menu",
-							"bottom_menu",
-							array(
-								"ROOT_MENU_TYPE" => "left",
-								"MENU_CACHE_TYPE" => "A",
-								"MENU_CACHE_TIME" => "36000000",
-								"MENU_CACHE_USE_GROUPS" => "Y",
-								"MENU_CACHE_GET_VARS" => array(),
-								"CACHE_SELECTED_ITEMS" => "N",
-								"MAX_LEVEL" => "1",
-								"USE_EXT" => "Y",
-								"DELAY" => "N",
-								"ALLOW_MULTI_SELECT" => "N"
-							),
-							false
-						);?>
-					</div>
-					<div class="col-sm-6 col-lg-3 order-lg-4 order-3">
-						<div style="padding: 20px;background:#eaeaeb">
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:main.include",
-								"",
-								array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR."include/sender.php",
-									"AREA_FILE_RECURSIVE" => "N",
-									"EDIT_MODE" => "html",
-								),
-								false,
-								array('HIDE_ICONS' => 'Y')
-							);?>
-						</div>
-						<div id="bx-composite-banner" style="padding-top: 20px"></div>
-					</div>
-					<div class="col-sm-6 col-lg-3 order-lg-1 order-4">
-						<div class="mb-3">
-							<a class="bx-footer-logo" href="<?=SITE_DIR?>">
-								<? $APPLICATION->IncludeComponent(
-									"bitrix:main.include",
-									"",
-									array(
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_DIR."include/company_logo_mobile.php"
-									),
-								false
-								);?>
-							</a>
-						</div>
-						<div class="mb-3 d-flex align-items-center">
-							<i class="fa fa-phone pr-3 text-white" style="font-size: 25px;"></i>
-							<span class="text-white">
-								<? $APPLICATION->IncludeComponent(
-									"bitrix:main.include",
-									"", array(
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_DIR."include/telephone.php"
-									),
-									false
-								);?>
-							</span>
-						</div>
-						<div class="mb-3 text-white">
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:main.include",
-								"",
-								array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR."include/schedule.php"
-								),
-								false
-							);?>
-						</div>
-						<div class="mb-3 text-white">
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:main.include",
-								"",
-								array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR."include/personal.php"
-								),
-								false
-							);?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bx-footer-section py-2 bg-secondary">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6 bx-up">
-							<a href="javascript:void(0)" data-role="eshopUpButton" class="text-white"><i class="fa fa-caret-up"></i> <?=GetMessage("FOOTER_UP_BUTTON")?></a>
-						</div>
-						<div class="col-sm-6 text-white text-right">
-							<? $APPLICATION->IncludeComponent("bitrix:main.include", "", array(
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_DIR."include/copyright.php"
-							), false);?>
-						</div>
-					</div>
-				</div>
-			</div>
-	</footer>
-	<div class="col d-sm-none">
-		<?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "bootstrap_v4", array(
-				"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-				"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-				"SHOW_PERSONAL_LINK" => "N",
-				"SHOW_NUM_PRODUCTS" => "Y",
-				"SHOW_TOTAL_PRICE" => "Y",
-				"SHOW_PRODUCTS" => "N",
-				"POSITION_FIXED" =>"Y",
-				"POSITION_HORIZONTAL" => "center",
-				"POSITION_VERTICAL" => "bottom",
-				"SHOW_AUTHOR" => "Y",
-				"PATH_TO_REGISTER" => SITE_DIR."login/",
-				"PATH_TO_PROFILE" => SITE_DIR."personal/"
-			),
-			false,
-			array()
-		);?>
-	</div>
-</div> <!-- //bx-wrapper -->
-
-
-<script>
-	BX.ready(function(){
-		var upButton = document.querySelector('[data-role="eshopUpButton"]');
-		BX.bind(upButton, "click", function(){
-			var windowScroll = BX.GetWindowScrollPos();
-			(new BX.easing({
-				duration : 500,
-				start : { scroll : windowScroll.scrollTop },
-				finish : { scroll : 0 },
-				transition : BX.easing.makeEaseOut(BX.easing.transitions.quart),
-				step : function(state){
-					window.scrollTo(0, state.scroll);
-				},
-				complete: function() {
-				}
-			})).animate();
-		})
-	});
-</script>
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__col">
+            <h3 class="footer__title">Покупки</h3>
+            <ul class="list">
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Как купить</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Пользовательское соглашение</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Контакты</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Способы оплаты заказа</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Доставка</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Возврат товара</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Таблица размеров</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Часто задаваемые вопросы</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Как правильно одевать ребенка</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__title">Lassie</h3>
+            <ul class="list">
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">О компании lassie</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">История</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Качество</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Уход за вещами</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Категории Lassie<sup>®</sup></a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Символы Lassie<sup>®</sup></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__title">Lassie клуб</h3>
+            <ul class="list">
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Зарегистрироваться</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Войти в личный кабинет</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Забыли Ваш пароль?</a>
+                </li>
+                <li class="list__item"><a href="javascript:void(0);" class="footer__text">Защита персональной информации</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__title">Социальные сети</h3>
+            <ul class="footer__socials socials">
+                <li class="socials__item"><a href="javascript:void(0);" class="socials__name socials__name_vk"><span class="icon-vkontakte"></span></a>
+                </li>
+                <li class="socials__item"><a href="javascript:void(0);" class="socials__name socials__name_ok"><span class="icon-odnoklassniki"></span></a>
+                </li>
+                <li class="socials__item"><a href="javascript:void(0);" class="socials__name socials__name_fb"><span class="icon-facebook"></span></a>
+                </li>
+                <li class="socials__item"><a href="javascript:void(0);" class="socials__name socials__name_tw"><span class="icon-twitter-bird"></span></a>
+                </li>
+            </ul>
+            <p class="footer__text">Следи за новостями и акциями
+                <br>в социальных сетях. Будь первым!</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container footer__container">
+            <div class="footer__bottom-col">
+                <p class="footer__text">Официальный интернет-магазин Lassie® в России</p>
+            </div>
+            <div class="footer__bottom-col">
+                <div class="footer__text-group"><a href="tel:+78003331204" class="footer__text">8 (800) 333-12-04 </a><span class="footer__text">(горячая линия)</span>
+                </div>
+                <div class="footer__text-group"><a href="tel:+74952150435" class="footer__text">8 (495) 215-04-35 </a><span class="footer__text">(ежедневно с 9:00 до 24:00)</span>
+                </div><a href="mailto:order@lassieshop.ru" class="footer__text footer__text_block">order@lassieshop.ru</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="assets/scripts/app.min.js"></script>
 </body>
+
 </html>

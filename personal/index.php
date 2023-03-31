@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Персональный раздел");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:sale.personal.section",
-	"bootstrap_v4",
+	".default",
 	Array(
 		"ACCOUNT_PAYMENT_ELIMINATED_PAY_SYSTEMS" => array("0"),
 		"ACCOUNT_PAYMENT_PERSON_TYPE" => "1",

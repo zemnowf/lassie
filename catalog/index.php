@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"bootstrap_v4", 
+	".default",
 	array(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "4",
@@ -175,7 +175,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"SIDEBAR_SECTION_SHOW" => "Y",
 		"SIDEBAR_DETAIL_SHOW" => "Y",
 		"SIDEBAR_PATH" => "/catalog/sidebar.php",
-		"COMPONENT_TEMPLATE" => "bootstrap_v4",
+		"COMPONENT_TEMPLATE" => ".default",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
 		"LABEL_PROP_MOBILE" => array(
 		),
