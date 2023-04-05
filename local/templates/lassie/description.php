@@ -1,4 +1,8 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-$arTemplate = Array(
-	"NAME"=>GetMessage("CSST_TEMPLATE_NAME")
-);?>
+<?
+$arTemplate = array (
+  'NAME' => 'Шаблон магазина десткой одежды Lassie',
+  'DESCRIPTION' => '',
+  'SORT' => '',
+  'TYPE' => '',
+);
+?>
