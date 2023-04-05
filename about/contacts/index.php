@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 
 	<?$APPLICATION->IncludeComponent(
 		"bitrix:main.feedback",
-		"bootstrap_v4",
+		".default",
 		Array(
 			"EMAIL_TO" => "sale@nyuta.bx",
 			"EVENT_MESSAGE_ID" => array(),

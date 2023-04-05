@@ -3,11 +3,11 @@ define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"bootstrap_v4", 
+	"bitrix:catalog",
+	".default",
 	array(
 		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => "4",
 		"TEMPLATE_THEME" => "site",
 		"HIDE_NOT_AVAILABLE" => "N",
 		"BASKET_URL" => "/personal/cart/",
@@ -129,12 +129,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000000",
 		"PAGER_SHOW_ALL" => "N",
-		"ADD_PICT_PROP" => "MORE_PHOTO",
+		"ADD_PICT_PROP" => "-",
 		"LABEL_PROP" => array(
-			0 => "NEWPRODUCT",
 		),
 		"PRODUCT_DISPLAY_MODE" => "Y",
-		"OFFER_ADD_PICT_PROP" => "MORE_PHOTO",
+		"OFFER_ADD_PICT_PROP" => "-",
 		"OFFER_TREE_PROPS" => array(
 			0 => "SIZES_SHOES",
 			1 => "SIZES_CLOTHES",
@@ -168,14 +167,15 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"MIN_AMOUNT" => "10",
 		"DETAIL_BRAND_USE" => "Y",
 		"DETAIL_BRAND_PROP_CODE" => array(
-			0 => "BRAND_REF",
-			1 => "",
+			0 => "",
+			1 => "BRAND_REF",
+			2 => "",
 		),
 		"COMPATIBLE_MODE" => "N",
 		"SIDEBAR_SECTION_SHOW" => "Y",
 		"SIDEBAR_DETAIL_SHOW" => "Y",
 		"SIDEBAR_PATH" => "/catalog/sidebar.php",
-		"COMPONENT_TEMPLATE" => "bootstrap_v4",
+		"COMPONENT_TEMPLATE" => ".default",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
 		"LABEL_PROP_MOBILE" => array(
 		),
@@ -217,8 +217,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"SEARCH_CHECK_DATES" => "Y",
 		"SEARCH_USE_SEARCH_RESULT_ORDER" => "N",
 		"SECTIONS_HIDE_SECTION_NAME" => "N",
-		"LIST_PROPERTY_CODE_MOBILE" => array(
-		),
+		"LIST_PROPERTY_CODE_MOBILE" => "",
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"LIST_ENLARGE_PRODUCT" => "STRICT",

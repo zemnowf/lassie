@@ -46,7 +46,7 @@
 		<h2>Новости</h2>
 		<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
-			"bootstrap_v4",
+			".default",
 			array(
 				"IBLOCK_TYPE" => "news",
 				"IBLOCK_ID" => "1",
