@@ -343,7 +343,7 @@ if (is_array($arResult['SKU_PROPS'])) {
                                         </div><?
                                     }
                                     ?>
-                                    <button form="<?= $arItemIDs['BUY_LINK'] ?>" class="btn"><?
+                                    <button id="<?= $arItemIDs['BUY_LINK'];?> form="<?= $arItemIDs['BUY_LINK'] ?>" class="btn"><?
                                         echo "Добавить в корзину";
                                         ?></button>
                                     <div style="clear: both;"></div>
