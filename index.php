@@ -4,8 +4,8 @@ $APPLICATION->SetTitle("Популярные товары");
 ?>
 <? // Самые продаваемые товары
 $APPLICATION->IncludeComponent(
-	"bitrix:sale.bestsellers", 
-	".default", 
+	"bitrix:sale.bestsellers",
+	".default",
 	array(
 		"HIDE_NOT_AVAILABLE" => "N",
 		"SHOW_DISCOUNT_PERCENT" => "Y",
@@ -17,7 +17,7 @@ $APPLICATION->IncludeComponent(
 		"MESS_NOT_AVAILABLE" => "Нет в наличии",
 		"MESS_BTN_SUBSCRIBE" => "Подписаться",
 		"PAGE_ELEMENT_COUNT" => "30",
-		"DETAIL_URL" => "",
+		"DETAIL_URL" => "/catalog/#SECTION_CODE#/#ELEMENT_CODE#/",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
@@ -48,10 +48,8 @@ $APPLICATION->IncludeComponent(
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"USE_PRODUCT_QUANTITY" => "Y",
 		"SHOW_PRODUCTS_2" => "N",
-		"PROPERTY_CODE_2" => array(
-		),
-		"CART_PROPERTIES_2" => array(
-		),
+		"PROPERTY_CODE_2" => array(),
+		"CART_PROPERTIES_2" => array(),
 		"ADDITIONAL_PICT_PROP_2" => "-",
 		"LABEL_PROP_2" => "-",
 		"PROPERTY_CODE_3" => "",
@@ -86,8 +84,7 @@ $APPLICATION->IncludeComponent(
 			1 => "",
 		),
 		"ADDITIONAL_PICT_PROP_5" => "",
-		"OFFER_TREE_PROPS_5" => array(
-		),
+		"OFFER_TREE_PROPS_5" => array(),
 		"CURRENCY_ID" => "RUB"
 	),
 	false

@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"bootstrap_v4", 
+	".default", 
 	array(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "4",
@@ -175,7 +175,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"SIDEBAR_SECTION_SHOW" => "N",
 		"SIDEBAR_DETAIL_SHOW" => "N",
 		"SIDEBAR_PATH" => "/catalog/sidebar.php",
-		"COMPONENT_TEMPLATE" => "bootstrap_v4",
+		"COMPONENT_TEMPLATE" => ".default",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
 		"LABEL_PROP_MOBILE" => "",
 		"LABEL_PROP_POSITION" => "top-left",
@@ -229,19 +229,22 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"SHOW_DEACTIVATED" => "N",
 		"SHOW_SKU_DESCRIPTION" => "N",
 		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
+			0 => "ATT_COMPOSITION",
+			1 => "ATT_ARTNUM",
+			2 => "ATT_SIZE",
 		),
 		"DETAIL_BLOG_URL" => "catalog_comments",
 		"DETAIL_BLOG_EMAIL_NOTIFY" => "N",
 		"DETAIL_FB_APP_ID" => "",
-		"DETAIL_IMAGE_RESOLUTION" => "16by9",
+		"DETAIL_IMAGE_RESOLUTION" => "1by1",
 		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
-		"DETAIL_SHOW_SLIDER" => "N",
+		"DETAIL_SHOW_SLIDER" => "Y",
 		"DETAIL_DETAIL_PICTURE_MODE" => array(
 			0 => "POPUP",
 			1 => "MAGNIFIER",
 		),
-		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
+		"DETAIL_ADD_DETAIL_TO_SLIDER" => "Y",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"MESS_PRICE_RANGES_TITLE" => "Цены",
 		"MESS_DESCRIPTION_TAB" => "Описание",
@@ -326,6 +329,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"TOP_SLIDER_INTERVAL" => "3000",
 		"TOP_SLIDER_PROGRESS" => "N",
 		"FILE_404" => "",
+		"DETAIL_SLIDER_INTERVAL" => "5000",
+		"DETAIL_SLIDER_PROGRESS" => "N",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE#/",
