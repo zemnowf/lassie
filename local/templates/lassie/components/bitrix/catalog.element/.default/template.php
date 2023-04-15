@@ -255,6 +255,16 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
                                         class="btn form__btn js-popup-open">Добавить в корзину
                                 </button>
                             </div>
+                            <div>
+                            <? $APPLICATION->IncludeComponent(
+                                "demo:fastorder.component",
+                                ".default",
+                                array(
+                                    'PRODUCT_ID' => $arResult['ID'],
+                                    'ORDER_TYPE' => 'PRODUCT'
+                                ));
+                            ?>
+                            </div>
                         </form>
                     </div>
                 </div>
