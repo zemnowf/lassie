@@ -2,9 +2,9 @@
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:eshop.socnet.links",
-	"bootstrap_v4",
+	".default",
 	array(
-		"COMPONENT_TEMPLATE" => "bootstrap_v4",
+		"COMPONENT_TEMPLATE" => ".default",
 		"FACEBOOK" => "https://www.facebook.com/1CBitrix",
 		"VKONTAKTE" => "https://vk.com/bitrix_1c",
 		"TWITTER" => "https://twitter.com/1c_bitrix",
